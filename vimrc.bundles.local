@@ -1,0 +1,34 @@
+Bundle 'bling/vim-airline'
+Bundle 'mattn/emmet-vim'
+
+" 添加 snip-mate 自动完成的语言支持
+Bundle "honza/vim-snippets"
+" Bundle 'scrooloose/snipmate-snippets'
+" NodeJS Snippest
+Bundle 'jamescarr/snipmate-nodejs'
+
+" -- Syntax --------------------
+" React
+Plugin 'mxw/vim-jsx'
+
+
+" -- Plugins --------------------
+" EditorConfig
+Plugin 'editorconfig/editorconfig-vim'
+
+" " 替代 vim-javascript(.vimrc.bundle) 获得更好的代码高亮效果
+" Plugin 'jelera/vim-javascript-syntax'
+" " Javascript Libs Syntax Supports
+" Plugin 'othree/javascript-libraries-syntax.vim'
+
+
+" " Javascript beautyify
+" " Plugin 'maksimr/vim-jsbeautify'
+" Plugin 'einars/js-beautify'
+
+
+" -- Colorschemes --------------------
+Bundle 'chriskempson/base16-vim'
+" Bundle 'chriskempson/vim-tomorrow-theme'
+" Bundle 'cocopon/iceberg.vim'
+" Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}

@@ -31,3 +31,102 @@ function! s:RemoveConflictingAlignMaps()
 endfunction
 command! -nargs=0 RemoveConflictingAlignMaps call s:RemoveConflictingAlignMaps()
 silent! autocmd VimEnter * RemoveConflictingAlignMaps
+
+
+
+
+" -- User Settings -----------------------------------------------
+" set cursorline " don't highlight current line
+
+" ==============
+" SYSTEM
+" ==============
+
+set encoding=utf-8
+" let base16colorspace=256
+" colorscheme base16-atelierforest
+
+" ==============
+" User Interface
+" ==============
+" set transparency=02
+
+" 去掉滚动条
+set guioptions-=l
+set guioptions-=L
+set guioptions-=r
+set guioptions-=R
+
+" ==============
+" Plugins
+" ==============
+
+" NerdTree
+let NERDTreeWinPos = "right"
+autocmd BufEnter * lcd %:p:h
+
+" vim-airline
+let g:airline_powerline_fonts = 1
+"" git status
+let g:airline#extensions#hunks#enabled = 1
+let g:airline#extensions#hunks#non_zero_only = 0
+let g:airline#extensions#hunks#hunk_symbols = ['+', '~', '-']"
+"" Fonts : Powerline https://github.com/Lokaltog/powerline-fonts
+" set guifont=Source\ Code\ Pro\ for\ Powerline:h14
+" set guifont=PragmataPro:h14
+" set guifont=Meslo\ LG\ L\ DZ\ Regular\ for\ Powerline:h14
+" set guifont=Droid\ Sans\ Mono\ for\ Powerline:h14
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h14
+
+
+" ==============
+" Javascript
+" ==============
+
+" vim-javascript-syntax 打开文件自动代码折叠
+" au FileType javascript call JavaScriptFold()
+
+" 设置缩进(缩写)
+set tabstop=2
+
+" Emmet
+" Emmet Indent Setting(Space Key * 2)
+let g:user_emmet_settings = {
+\  'indentation' : '  '
+\}
+
+" React Syntex
+
+" typescript.vim
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
+
+set t_Co=256
+
+" set expandtab
+" set tabstop=2
+" set softtabstop=2
+" set shiftwidth=2
+" set tabstop=4 softtabstop=2 shiftwidth=2 expandtab
+
+" sw  : shiftwidth
+" ts  : tabstop
+" sts : softtabstop
+" autocmd FileType javascript set sw=4 ts=8 sts=4
+" 多种文件类型设置方式 <http://segmentfault.com/q/1010000000453410>
+" autocmd FileType javascript,html,css,xml set ai
+
+
+" js is javascript
+" autocmd BufRead,BufNewFile *.js set filetype=javascript
+
+" " Js Beautify
+" map <c-f> :call JsBeautify()<cr>
+" " or
+" autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+" " for html
+" autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+" " for css or scss
+" autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+
+
