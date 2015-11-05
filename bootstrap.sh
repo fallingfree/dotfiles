@@ -28,7 +28,7 @@ function doIt() {
 
   # VIM 安装 vundle 插件
   echo 'Installing gmarik/vundle for vim...'
-  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/vundle
+  git clone https://github.com/VundleVim/Vundle.vim.git ~/.dotfiles/vim/bundle/Vundle.vim
 
 
   # VIM 安装 plugins

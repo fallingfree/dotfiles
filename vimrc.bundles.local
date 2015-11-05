@@ -4,6 +4,7 @@ Bundle 'mattn/emmet-vim'
 " 添加 snip-mate 自动完成的语言支持
 Bundle "honza/vim-snippets"
 " Bundle 'scrooloose/snipmate-snippets'
+
 " NodeJS Snippest
 Bundle 'jamescarr/snipmate-nodejs'
 
@@ -28,7 +29,7 @@ Plugin 'editorconfig/editorconfig-vim'
 
 
 " -- Colorschemes --------------------
-Bundle 'chriskempson/base16-vim'
+" Bundle 'chriskempson/base16-vim'
 " Bundle 'chriskempson/vim-tomorrow-theme'
 " Bundle 'cocopon/iceberg.vim'
 " Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}

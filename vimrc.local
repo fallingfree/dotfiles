@@ -10,7 +10,7 @@ inoremap jj <ESC>
 " gui settings
 if (&t_Co == 256 || has('gui_running'))
   if ($TERM_PROGRAM == 'iTerm.app')
-    colorscheme solarized
+    colorscheme default
   else
     colorscheme desert
   endif
@@ -45,6 +45,7 @@ silent! autocmd VimEnter * RemoveConflictingAlignMaps
 set encoding=utf-8
 " let base16colorspace=256
 " colorscheme base16-atelierforest
+" colorscheme base16-monokai
 
 " ==============
 " User Interface
@@ -57,12 +58,19 @@ set guioptions-=L
 set guioptions-=r
 set guioptions-=R
 
+" http://tangosource.com/blog/a-tmux-crash-course-tips-and-tweaks/
+if exists('$TMUX')
+  set term=screen-256color
+endif
+
+" set background=dark
+
 " ==============
 " Plugins
 " ==============
 
 " NerdTree
-let NERDTreeWinPos = "right"
+" let NERDTreeWinPos = "right"
 autocmd BufEnter * lcd %:p:h
 
 " vim-airline
@@ -97,11 +105,7 @@ let g:user_emmet_settings = {
 
 " React Syntex
 
-" typescript.vim
-autocmd QuickFixCmdPost [^l]* nested cwindow
-autocmd QuickFixCmdPost    l* nested lwindow
-
-set t_Co=256
+" set t_Co=256
 
 " set expandtab
 " set tabstop=2
